@@ -27,7 +27,8 @@ namespace PULL_self_binding
         private void button1_Click(object sender, EventArgs e)
         {
             string txtDestinationFolder = @"c:\pobrane_z_ePUAP";
-            string txtAdresSkrytki = "/zsisigidspzoo/skrytkaKD";
+            //string txtAdresSkrytki = "/zsisigidspzoo/skrytkaKD";
+            string txtAdresSkrytki = "skrytkaKD";
             string txtNazwaSkrytki = "test KD";
             string txtPodmiot = "zsisigidspzoo";
 
@@ -100,7 +101,10 @@ namespace PULL_self_binding
             }
             catch (Exception ex)
             {
-                textBox1.AppendText(string.Format("Wystąpił błąd podczas pobierania liczby oczekujacych dokumentow" + ex.Message));
+                textBox1.AppendText(string.Format("Wystąpił błąd podczas pobierania liczby oczekujacych dokumentow:   " + ex.Message));
+                textBox1.AppendText(string.Format("Wystąpił błąd podczas pobierania liczby oczekujacych source:   " + ex));
+                
+
             }
 
 
@@ -158,7 +162,7 @@ namespace PULL_self_binding
         private X509Certificate2 GetClientCert()
         {
             bool jestCert = false;
-            string szukajCertyfikat = "epuap_testy";  //FriendlyName
+            string szukajCertyfikat = "SIGID_EPUAP_CLIENT";  //FriendlyName
 
             X509Store keystore = new X509Store(StoreName.My, StoreLocation.CurrentUser);
             keystore.Open(OpenFlags.ReadOnly);
