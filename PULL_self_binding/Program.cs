@@ -14,7 +14,6 @@ namespace PULL_self_binding
         [STAThread]
         static void Main()
         {
-            //hello to ja 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

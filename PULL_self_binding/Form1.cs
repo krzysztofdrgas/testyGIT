@@ -32,6 +32,8 @@ namespace PULL_self_binding
             string txtPodmiot = "zsisigidspzoo";
 
 
+            //nowy komentarz
+
             //parametry do zapytania
             ZapytaniePullOczekujaceTyp zapBody = new ZapytaniePullOczekujaceTyp();
             zapBody.adresSkrytki = txtAdresSkrytki;
