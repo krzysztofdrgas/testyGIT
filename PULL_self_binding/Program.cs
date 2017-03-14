@@ -15,6 +15,8 @@ namespace PULL_self_binding
         static void Main()
         {
             //moj komentarz
+            //drugi komentarz
+            //eeeeee  
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
